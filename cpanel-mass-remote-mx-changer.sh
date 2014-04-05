@@ -18,7 +18,7 @@ echo ${dom}
 sed -i '/\sMX\s/d' ${file}
 sed -i '/mail\s/d' ${file}
 sed -i '/webmail\s/d' ${file}
-echo "${dom}.	600	IN	MX	0	${remotemxserver}." >> ${file}
+echo "${dom}	600	IN	MX	0	${remotemxserver}." >> ${file}
 echo "mail	600	IN	CNAME	${remotemxserver}." >> ${file}
 echo "webmail	600	IN	CNAME	${remotemxserver}." >> ${file}
 done
